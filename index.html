@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة المباركة</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+    <div id="star-container"></div>
+
+    <header class="header">
+        <button class="menu-toggle" id="menu-toggle-btn" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+        <div class="logo">قرآن</div> 
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="search-container">
+            <input type="text" id="search-surah-input" placeholder="بحث عن سورة...">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-surahs" class="active">🕋 السور</a></li>
+                <!-- <li><a href="#" id="nav-search">🔍 بحث (متكامل)</a></li> Placeholder if we want a dedicated search page -->
+                <li><a href="#" id="nav-listen">🎧 استمع</a></li>
+                <li><a href="#" id="nav-khatma">📅 ختمتي</a></li>
+                <li><a href="#" id="nav-settings">⚙️ إعدادات</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content" id="main-content-area">
+        <section id="surah-list-section">
+            <h1 class="page-title">فهرس السور</h1>
+            <div id="surah-list-container">
+                <!-- Surah cards will be dynamically inserted here -->
+            </div>
+            <div id="loading-indicator" style="display:none; text-align:center; font-size:1.2em; margin-top:20px; color: var(--accent-color);">جار التحميل...</div>
+            <div id="no-results-message" style="display:none; text-align:center; font-size:1.2em; margin-top:20px; color: var(--primary-text-color);">لا توجد سور تطابق بحثك.</div>
+        </section>
+
+        <section id="surah-display-section">
+            <div class="verse-controls">
+                <button id="decrease-font-size" aria-label="تصغير الخط">-</button>
+                <span>حجم الخط</span>
+                <button id="increase-font-size" aria-label="تكبير الخط">+</button>
+            </div>
+            <h2 id="surah-title-display"></h2>
+            <div id="bismillah-display"></div>
+            <div id="verse-container">
+                <!-- Verses will be dynamically inserted here -->
+            </div>
+            <button id="back-to-surah-list">العودة إلى قائمة السور</button>
+        </section>
+    </main>
+
+    <button id="scroll-to-top-btn" title="العودة للأعلى" aria-label="العودة للأعلى">↑</button>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
